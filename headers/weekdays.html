@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f()
+     {
+        let url="https://gist.githubusercontent.com/josephbhardwaj301/917b4c0cbcd081a90e7d71480255f04f/raw/f875c423a2bad4c11cd592455d6811028419163f/weekday.txtsss";
+        let p=fetch(url);
+        p.then((response)=>{
+            return response.json();
+        }).then((value)=>{
+            console.log(value);
+        });
+        
+     }
+     f();
+    </script>
+</head>
+<body>
+    <button onclick="f()">
+            Map
+        </button>
+        <p id="url"></p>
+</body>
+</html>

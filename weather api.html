@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let a=[];
+    function f()
+    {
+        let city="varanasi";
+        // let url="https://history.openweathermap.org/data/2.5/history/city?lat=41.85&lon=-87.65&appid=40842377224b8f0fb6edc9890aa3055e"
+        let url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=40842377224b8f0fb6edc9890aa3055e&units=metric`;
+        let p=fetch(url);
+        p.then((response)=>{
+            return response.json();
+        }).then((value)=>{
+            console.log(value);
+            k=value;
+            let id=k["weather"][0][["id"]];
+            let icon=k["weather"][0][["icon"]];
+            let main=k["weather"][0][["main"]];
+            let temp=k["main"][["temp"]];          // let city=k;
+            document.getElementById("d").innerHTML=`${id} , ${main},${temp},${city}  ${icon}`;
+            let path=`https://openweathermap.org/img/w/${icon}.png`;
+            document.getElementById("img").src=path;
+        })
+}
+f();
+</script>
+<body>
+    <img id="img" src=""/>
+    <input type="text" id="a"></input>
+    <div id="d"></div>
+</body>
+</html>

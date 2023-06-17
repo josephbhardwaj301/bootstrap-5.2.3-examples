@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+function f()
+{
+    let numbers = [1, 2, 3, 4, 5,6,7];
+// let squares = numbers.map(num => weekDay(num));
+let squares = numbers.map(num => weekDay(num));
+console.log(squares); // Logs: [1, 4, 9, 16, 25]
+document.getElementById("t").innerHTML=numbers;
+}
+function weekDay(n)
+{
+n=Number(n);
+switch(n)
+{
+    case 1:return "Sunday";
+    case 2:return "Monday";
+    case 3:return "Tuesday";
+    case 4:return "Wednesday";
+    case 5:return "Thursday";
+    case 6:return "Friday";
+    case 7:return "Saturday";
+}
+return "Invalid";
+}
+
+</script>
+<body>
+    <button onclick="f()">
+        Click
+        </button>
+        <p id="t"></p>
+
+    <button onclick="f1()">
+    Click for age
+    </button>
+    <p id="u"></p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let arr=[]
+    function A()
+{
+let url="https://gist.githubusercontent.com/josephbhardwaj301/917b4c0cbcd081a90e7d71480255f04f/raw/9d1e8ca558da58585c23c963688a79e4af8f5264/gistfile1.txt";
+let p=fetch(url)
+p.then((response)=>{
+    return response.json();
+}).then((value1)=>{
+    console.log(value1);
+    arr=value1
+    // document.write(value.name+" "+value.age)
+    // document.getElementById("a").value=value1.name+" "+value1.age
+})
+}
+
+function P(){
+document.getElementById("a").value=arr.name+" "+arr.age;
+}
+
+A();
+ </script>
+<body>
+ <input  type="text" id="a" value="**"><br/>
+    <button onclick="P()">Click</button>
+</body>
+</html>

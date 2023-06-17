@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+        function f()
+        {
+            console.log("Clicked");
+            let t=document.getElementById("t1");
+            console.log(t);
+            let x=Number( t.value);
+            console.log(x);
+            t.value=2*x;
+        }
+        function f1()
+        {
+            console.log("Text Clicked");
+            let u=document.getElementById("t2");
+            console.log(u);
+            let y=u.value;
+            console.log(u);
+            u.value=("Hello")
+        }
+        // function f2()
+        // {
+        //     console.log("Got image");
+        //     let v=document.getElementById("t3");
+        //     console.log(v);
+        //     let z=Image(v.value);
+        //     console.log(v); 
+        // }
+        function loadImage()
+        {
+            var x=document.getElementById("t2").value;
+            document.getElementById("x").src=x;
+        }
+    </script>
+    </head>
+    <body>
+        <input type="button" value="click number" onclick="f()">
+        <input type="number" id="t1">
+        <br><br><br><br>
+        <input type="button" value="Click Text" onclick="f1()">
+        <input onkeyup="loadImage()" onchange="loadImage()" type="text" id="t2">
+        <br><br><br><br>
+        <!-- <input type="button" value="Click for img" onclick="f2()"> -->
+        <img id="x" src="1.jpg" alt="" width="500" height="400">
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+function f()
+{
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(function(number) {
+  return number * 2;
+});
+console.log(doubledNumbers);
+document.getElementById("p").innerHTML=doubledNumbers;
+}
+function f1()
+{
+const numbers = [1, 2, 3, 4, 5];
+const filteredNumbers = numbers.map(function(number) {
+  if (number % 2 == 0) {
+    return number;
+  }
+});
+console.log(filteredNumbers);
+document.getElementById("q").innerHTML=filteredNumbers;
+}
+
+function f2()
+{
+const fruits = ['apple', 'banana', 'orange', 'kiwi'];
+    fruits.splice(2, 0, 'pear');
+    console.log(fruits);
+
+console.log(fruits);
+document.getElementById("r").innerHTML=fruits;
+}
+function f3()
+{
+    const fruits = ['apple', 'banana', 'orange', 'kiwi'];
+fruits.splice(1, 2);
+console.log(fruits); // ['apple', 'kiwi']
+
+// const fruits = ['apple', 'banana', 'orange', 'kiwi'];
+fruits.splice(2, 1, 'pear');
+
+console.log(fruits);
+document.getElementById("r").innerHTML=fruits;
+}
+function f4()
+{
+    const fruits = ["apple", "banana", "cherry"];
+
+console.log(fruits[0]); // "apple"
+console.log(fruits[1]); // "banana"
+console.log(fruits[2]); // "cherry"
+document.getElementById("s").innerHTML=fruits;
+}
+function f5()
+{
+    const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9],[10,11,12]];
+console.log(matrix[1][2]);
+document.getElementById("t").innerHTML=matrix;
+}
+
+
+</script>
+    </head>
+<body>
+        <button onclick="f()">
+            Map
+        </button>
+        <p id="p"></p>
+    
+    <button onclick="f1()">
+        Map1
+    </button>
+    <p id="q"></p>
+
+    <button onclick="f2()">
+        Map2
+    </button>
+    <p id="r"></p>
+
+    <button onclick="f3()">
+        Map3
+    </button>
+    <p id="r"></p>
+    <button onclick="f4()">
+    Map4
+    </button>
+    <p id="s"></p>
+    <button onclick="f5()">
+        Map5
+        </button>
+        <p id="t"></p>
+</body>
+</html> 

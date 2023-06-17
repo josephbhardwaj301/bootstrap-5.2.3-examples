@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+function f()
+{
+    let numbers = [1, 2, 3, 4, 5];
+let squares = numbers.map(num => num * num);
+console.log(squares); // Logs: [1, 4, 9, 16, 25]
+document.getElementById("t").innerHTML=numbers;
+}
+
+
+function f1()
+{
+    let people = [
+  { name: "A", age: 30 },
+  { name: "B", age: 25 },
+  { name: "C", age: 35 }
+];
+let names = people.map(person => person.name);
+console.log(names);
+document.getElementById("u").innerHTML=people;
+}
+</script>
+<body>
+    <button onclick="f()">
+        Click
+        </button>
+        <p id="t"></p>
+
+    <button onclick="f1()">
+    Click for age
+    </button>
+    <p id="u"></p>
+</body>
+</html>
